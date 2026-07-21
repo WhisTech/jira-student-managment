@@ -324,3 +324,16 @@ Input Validation (Pydantic)
 Parameterized SQL Queries
 Environment Variables for Secrets
 CORS Configuration
+
+<!-- Deployment -->
+                   Internet
+                        │
+      ┌─────────────────┴─────────────────┐
+      │                                   │
+      ▼                                   ▼
+Frontend (Vercel)                 Backend (Render)
+      │                                   │
+      └─────────────────┬─────────────────┘
+                        │
+                        ▼
+                 Supabase PostgreSQL
