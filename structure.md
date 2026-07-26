@@ -278,42 +278,44 @@ Attendance
 /api
 
 /auth
-    POST /login
-    POST /logout
+POST /login
+POST /logout
 
 /students
-    GET
-    POST
-    PUT
-    DELETE
+GET /
+GET /{id}
+POST /
+PUT /{id}
+DELETE /{id}
 
-/faculty
-    GET
-    POST
-    PUT
-    DELETE
+/teachers
+GET /
+POST /
+PUT /{id}
+DELETE /{id}
 
 /courses
-    GET
-    POST
-    PUT
-    DELETE
+GET /
+POST /
+PUT /{id}
+DELETE /{id}
 
 /subjects
-    GET
-    POST
-    PUT
-    DELETE
+GET /
+POST /
+PUT /{id}
+DELETE /{id}
 
 /attendance
-    POST /mark
-    PUT /update
-    GET /history
+GET /
+POST /
+PUT /{id}
+DELETE /{id}
 
 /reports
-    GET /daily
-    GET /monthly
-    GET /student
+GET /daily
+GET /monthly
+GET /student/{id}
 
        
  <!-- Security -->
