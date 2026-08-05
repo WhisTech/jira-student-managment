@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Student Management</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Student Management</div>
+    <nav>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="students.html">Students</a>
+      <button class="btn-logout" onclick="signOut()">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Dashboard</h1>
+    <div class="stats">
+      <div class="card"><h3>Total Students</h3><div class="value" id="statTotal">—</div></div>
+      <div class="card"><h3>Departments</h3><div class="value" id="statDepts">—</div></div>
+      <div class="card"><h3>This Year</h3><div class="value" id="statYear">—</div></div>
+    </div>
+
+    <div class="section">
+      <h2>Recent Students</h2>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Roll No</th><th>Department</th><th>Year</th><th>Email</th></tr>
+        </thead>
+        <tbody id="recentRows"></tbody>
+      </table>
+      <div class="footer-link"><a href="students.html">View all students →</a></div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

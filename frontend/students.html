@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students | Student Management</title>
+  <link rel="stylesheet" href="css/students.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Student Management</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="students.html" class="active">Students</a>
+      <button class="btn-logout" onclick="signOut()">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="msg" id="msg"></div>
+    <div class="toolbar">
+      <h1>Students</h1>
+      <input type="text" class="search" id="searchInput" placeholder="Search by name, roll no, or department...">
+      <button class="btn-add" onclick="openModal()">+ Add Student</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Roll No</th><th>Department</th><th>Year</th><th>Email</th><th>Phone</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="studentsBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <h2 id="modalTitle">Add Student</h2>
+      <form id="studentForm">
+        <input type="hidden" id="studentId">
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" id="fullName" required>
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="field">
+          <label>Roll Number</label>
+          <input type="text" id="rollNumber">
+        </div>
+        <div class="field">
+          <label>Department</label>
+          <select id="department">
+            <option value="">Select...</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Electronics</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Year</label>
+          <select id="year">
+            <option value="">Select...</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input type="tel" id="phone">
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn btn-save">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/students.js"></script>
+</body>
+</html>
