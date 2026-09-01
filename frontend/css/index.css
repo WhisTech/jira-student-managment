@@ -5,7 +5,7 @@ body {
   display: flex;
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   color: #1e1b4b;
-}
+} 
 .hero { 
   flex: 1; 
   display: flex;
